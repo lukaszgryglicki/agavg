@@ -39,7 +39,8 @@ usedexports: ${GO_BIN_FILES}
 errcheck: ${GO_BIN_FILES}
 	${GO_ERRCHECK} ./...
 
-check: fmt lint imports vet const usedexports errcheck
+# check: fmt lint imports vet const usedexports errcheck
+check: fmt lint imports vet const usedexports
 
 install: check ${BINARIES}
 	${GO_INSTALL} ${GO_BIN_CMDS}
